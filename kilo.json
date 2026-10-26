@@ -1,6 +1,6 @@
 ﻿{
   "$schema": "https://app.kilo.ai/config.json",
-  "model": "anthropic/claude-sonnet-4-20250514",
+  "model": "kilo/kilo-auto/free",
   "default_agent": "code",
   "instructions": ["AGENTS.md"],
   "snapshot": true,
@@ -48,6 +48,31 @@
     "markitdown": {
       "type": "local",
       "command": ["npx", "-y", "@microsoft/markitdown-mcp"],
+      "enabled": true
+    },
+    "wikipedia": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-wikipedia"],
+      "enabled": true
+    },
+    "duckduckgo": {
+      "type": "local",
+      "command": ["npx", "-y", "duckduckgo-mcp-server"],
+      "enabled": true
+    },
+    "arxiv": {
+      "type": "local",
+      "command": ["npx", "-y", "arxiv-mcp-server"],
+      "enabled": true
+    },
+    "hackernews": {
+      "type": "local",
+      "command": ["npx", "-y", "hackernews-mcp"],
+      "enabled": true
+    },
+    "youtube-transcript": {
+      "type": "local",
+      "command": ["npx", "-y", "youtube-transcript-mcp"],
       "enabled": true
     }
   }

@@ -1,0 +1,54 @@
+﻿{
+  "$schema": "https://app.kilo.ai/config.json",
+  "model": "anthropic/claude-sonnet-4-20250514",
+  "default_agent": "code",
+  "instructions": ["AGENTS.md"],
+  "snapshot": true,
+  "mcp": {
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "enabled": true
+    },
+    "filesystem": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "D:\\my project"],
+      "enabled": true
+    },
+    "memory": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+      "enabled": true
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "git": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-git", "--repository", "D:\\my project"],
+      "enabled": true
+    },
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp@latest"],
+      "enabled": true
+    },
+    "fetch": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-fetch"],
+      "enabled": true
+    },
+    "time": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-time"],
+      "enabled": true
+    },
+    "markitdown": {
+      "type": "local",
+      "command": ["npx", "-y", "@microsoft/markitdown-mcp"],
+      "enabled": true
+    }
+  }
+}
